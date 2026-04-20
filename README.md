@@ -36,6 +36,7 @@ Use this flow for a quick submission demo:
 6. Log out and show that the home page redirects back to login.
 7. Log back in and show that the saved note is still attached to that account.
 
-## Demo Files
 
-Put your recorded demo in the `demo/` folder before submission if you want the video saved alongside the project files.
+## Demo Video
+
+https://github.com/user-attachments/assets/9bbdb5c1-7083-48e5-a3ee-307a9b6282a7
