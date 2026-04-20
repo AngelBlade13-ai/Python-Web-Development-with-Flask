@@ -1,25 +1,35 @@
-{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
-%}
-<h1 align="center">Notes</h1>
+{% extends "base.html" %} {% block title %}My Notes{% endblock %} {% block
+content %}
+<div class="text-center mb-4">
+  <h1 class="h2">My Notes</h1>
+  <p class="text-muted mb-0">Quick notes tied to your account.</p>
+</div>
 <ul class="list-group list-group-flush" id="notes">
   {% if user is defined and user.notes %}
-  {% for note in user.notes %}
-  <li class="list-group-item">
-    {{ note.data }}
-    <button type="button" class="close" onClick="deleteNote({{ note.id }})">
-      <span aria-hidden="true">&times;</span>
-    </button>
+  {% for note in user.notes | sort(attribute='date', reverse=True) %}
+  <li class="list-group-item note-card">
+    <div class="d-flex justify-content-between align-items-start">
+      <div class="pr-3">
+        <div>{{ note.data }}</div>
+        <small class="text-muted">
+          Created {{ note.date.strftime("%b %d, %Y at %I:%M %p") }}
+        </small>
+      </div>
+      <button type="button" class="close" onClick="deleteNote({{ note.id }})">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
   </li>
   {% endfor %}
   {% else %}
-  <li class="list-group-item">No notes yet.</li>
+  <li class="list-group-item text-muted">No notes yet. Add one below.</li>
   {% endif %}
 </ul>
-<form method="POST">
+<form method="POST" class="mt-4">
   <textarea name="note" id="note" class="form-control"></textarea>
   <br />
   <div align="center">
-    <button type="submit" class="btn btn-primary">Add Note</button>
+    <button type="submit" class="btn btn-primary px-4">Add Note</button>
   </div>
 </form>
 {% endblock %}

@@ -1,0 +1,14 @@
+body {
+  background-color: #f5f7fb;
+}
+
+.navbar-brand {
+  letter-spacing: 0.03em;
+}
+
+.note-card {
+  border-radius: 0.5rem;
+  margin-bottom: 0.75rem;
+  background-color: #fff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
