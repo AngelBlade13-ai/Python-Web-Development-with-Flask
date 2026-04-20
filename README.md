@@ -39,8 +39,8 @@ Use this flow for a quick submission demo:
 
 ## Demo Video
 
-https://github.com/user-attachments/assets/9bbdb5c1-7083-48e5-a3ee-307a9b6282a7
 
-If the embedded preview does not show the full recording on GitHub, use the direct full demo link below:
 
-Full demo link: https://github.com/user-attachments/assets/9bbdb5c1-7083-48e5-a3ee-307a9b6282a7
+https://github.com/user-attachments/assets/b7dbe4dd-80d5-4f5d-ac56-e3b00ce7e9ba
+
+
